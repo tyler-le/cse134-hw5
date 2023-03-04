@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="source/assets/styles/style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <script
+      src="https://kit.fontawesome.com/3c46798e71.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <title>Tyler's Portfolio</title>
+  </head>
+  <!-- Google tag (gtag.js) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RJ9BMPM8ER"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RJ9BMPM8ER');
+  </script>
+
+  <body>
+    <main>
+      <header>
+        <nav class="mobile">
+          <i id="hamburger" class="fa fa-bars"></i>
+        </nav>
+        <nav class="header-nav">
+          <a id="signature" href="#">TL</a>
+          <ul>
+            <li><a href="#about-me">ABOUT ME</a></li>
+            <li><a href="#experience">EXPERIENCE</a></li>
+            <li><a href="#projects">PROJECTS</a></li>
+            <li><a href="#contact">CONTACT</a></li>
+            <li><a href="source/part1/nativedialogs.html">PART 1</a></li>
+            <li><a href="source/part2/customdialogs.html">PART 2</a></li>
+            <li><a href="source/part3/crud.html">PART 3</a></li>
+            <li><a href="source/part4/styledcrud.html">PART 4</a></li>
+
+          </ul>
+        </nav>
+      </header>
+      <div class="mobile-menu">
+        <ul>
+          <li><a href="#about-me">ABOUT ME</a></li>
+          <li><a href="#experience">EXPERIENCE</a></li>
+          <li><a href="#projects">PROJECTS</a></li>
+          <li><a href="#contact">CONTACT</a></li>
+        </ul>
+      </div>
+
+      <section id="about-me">
+        <article>
+          <p class="fade-in">Hello,</p>
+          <h3 class="fade-in">I'm Tyler Le</h3>
+          <p class="fade-in">Software Engineer Intern at Amazon</p>
+        </article>
+
+        <picture>
+          <source srcset="source/assets/images/avatar.svg" media="(max-width: 425px)">
+          <img
+            class="avatar fade-in"
+            src="source/assets/images/avatar.svg"
+            alt="Avatar Photo of Me"
+          />
+        </picture>
+      </section>
+
+      <section id="experience">
+        <h3 class="page-header">Experience</h3>
+
+        <div class="grid">
+          <div class="box">
+            <article>
+              <picture>
+                <img
+                  class="company-logo wiggle"
+                  src="source/assets/images/amazon.webp"
+                  alt="Amazon Logo"
+                  loading="lazy"
+                />
+              </picture>
+              <p>Summer 2023.</p>
+            </article>
+          </div>
+
+          <div class="box">
+            <article>
+              <picture>
+                <img
+                  class="company-logo"
+                  src="source/assets/images/general_atomics.webp"
+                  alt="General Atomics Logo"
+                  loading="lazy"
+                />
+              </picture>
+              <p>
+                Developed code on the Autonomous Takeoff and Landing Capability
+                for Unmanned Aerial Vehicles (UAVs).
+              </p>
+            </article>
+          </div>
+
+          <div class="box">
+            <article>
+              <picture>
+                <img
+                  class="company-logo"
+                  src="source/assets/images/cardea_bio.webp"
+                  alt="Cardea Bio Logo"
+                  loading="lazy"
+                />
+              </picture>
+              <p>
+                Automated science experiments with liquid-handling robots and
+                created an application to upload procedures to the robot.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects">
+        <h3 class="page-header">Projects</h3>
+        <article>
+          <h5>Autonomous Drone</h5>
+          <p>
+            Developed a fully autonomous drone using facial recognition and the
+            DJI Tello Python library.
+          </p>
+        </article>
+        <article>
+          <h5>Zoom Attendance Taker</h5>
+          <p>
+            Built a full-stack Flask web application, allowing users to upload a
+            screenshot of their Zoom meeting and to autonomously mark attendance
+            using facial recognition
+          </p>
+        </article>
+        <article>
+          <h5>Internship Tracker</h5>
+          <p>
+            Configured a comprehensive CI/CD pipeline using GitHub Actions for
+            automated linting, HTML validation, documentation generation and
+            testing of code changes. Wrote and executed automated E2E
+            (end-to-end) tests using Jest and Puppeteer.
+          </p>
+        </article>
+      </section>
+
+      <section id="contact">
+        <h3 class="page-header">Contact Me</h3>
+        <form action="#">
+          <fieldset>
+            <legend>Contact Me</legend>
+            <label for="fname">Name
+            <input
+              id="fname"
+              type="text"
+              placeholder="Enter Your Name"
+              required
+            /></label>
+            <br />
+            <label for="email">Email
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter Your Email"
+              required
+            /></label>
+            <br />
+            <label for="message">Message
+            <textarea
+              name="message"
+              id="message"
+              placeholder="Enter a Message"
+              required
+            ></textarea></label>
+            <button type="submit">Submit</button>
+          </fieldset>
+        </form>
+      </section>
+
+
+    </main>
+
+    <footer>
+      <nav>
+        <h5>Socials</h5>
+        <ul>
+          <li>
+            <a href="https://www.linkedin.com/in/le-tyler/" target="_blank"
+              >LinkedIn</a
+            >
+          </li>
+          <li>
+            <a href="https://github.com/tyler-le" target="_blank">GitHub</a>
+          </li>
+        </ul>
+      </nav>
+
+      <nav>
+        <h5>Contact</h5>
+        <ul>
+          <li>
+            <a href="mailto:le.tyler.h@gmail.com" target="_blank">Email</a>
+          </li>
+          <li><a href="tel:6193688172" target="_blank">Phone</a></li>
+        </ul>
+      </nav>
+
+      <nav>
+        <h5>Miscellaneous</h5>
+        <ul>
+          <li><a href="source/assets/images/Tyler_Le_Resume.pdf" download>Resume</a></li>
+        </ul>
+      </nav>
+    </footer>
+
+    <script src="source/app.js"></script>
+
+  </body>
+</html>
