@@ -38,6 +38,9 @@
       const putBtn = document.getElementById("putBtn");
       const deleteBtn = document.getElementById("deleteBtn");
 
+      document.getElementById("date").value = new Date().toLocaleString();
+
+
       postBtn.addEventListener("click", () => {
         doPost();
       });
