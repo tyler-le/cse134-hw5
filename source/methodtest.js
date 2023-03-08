@@ -1,22 +1,22 @@
-export function doPost() {
-    const formData = new FormData(document.querySelector("form"));
-    const response = document.getElementById("response");
+export async function doPost() {
+        const formData = new FormData(document.querySelector("form"));
+        const response = document.getElementById("response");
 
-    fetch("https://httpbin.org/post", {
-        method: "POST",
-        body: formData,
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-            let formattedData = JSON.stringify(data, null, 2);
-            response.innerHTML = `<pre>${formattedData}</pre>`;
-        })
-        .catch((error) => console.error(error));
+        const fetchResponse = await fetch("https://httpbin.org/post", {
+            method: "POST",
+            body: formData,
+        });
+        
+        if (!fetchResponse.ok) { throw new Error("Cannot get response"); }
+
+        const data = await fetchResponse.json();
+        console.log(data);
+
+        let formattedData = JSON.stringify(data, null, 2);
+        response.innerHTML = `<pre>${formattedData}</pre>`;
 }
 
-// TODO: Need to pass in data to GET request
-export function doGet() {
+export async function doGet() {
     const response = document.getElementById("response");
     const id = document.getElementById("id").value;
     const articleName = document.getElementById("article_name").value;
@@ -29,48 +29,47 @@ export function doGet() {
     url.searchParams.append("article_body", articleBody);
     url.searchParams.append("date", date);
 
-    fetch(url)
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-            let formattedData = JSON.stringify(data, null, 2);
-            response.innerHTML = `<pre>${formattedData}</pre>`;
-        })
-        .catch((error) => console.error(error));
+    const fetchResponse = await fetch(url);
+    if (!fetchResponse.ok) { throw new Error("Cannot get response"); }
+
+    const data = await fetchResponse.json();
+    let formattedData = JSON.stringify(data, null, 2);
+    response.innerHTML = `<pre>${formattedData}</pre>`;
 }
 
-export function doPut() {
+export async function doPut() {
+    
     const formData = new FormData(document.querySelector("form"));
     const response = document.getElementById("response");
 
-    fetch("https://httpbin.org/put", {
+    const fetchResponse = await fetch("https://httpbin.org/put", {
         method: "PUT",
         body: formData,
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-            let formattedData = JSON.stringify(data, null, 2);
-            response.innerHTML = `<pre>${formattedData}</pre>`;
-        })
-        .catch((error) => console.error(error));
+    });
+
+    const data = await fetchResponse.json();
+    if (!fetchResponse.ok) { throw new Error("Cannot get response"); }
+
+    let formattedData = JSON.stringify(data, null, 2);
+    response.innerHTML = `<pre>${formattedData}</pre>`;
+    
 }
 
-export function doDelete() {
+export async function doDelete() {
     const response = document.getElementById("response");
     const id = document.getElementById("id").value;
 
     const url = new URL("https://httpbin.org/delete");
     url.searchParams.append("id", id);
 
-    fetch(url, {
+    const fetchResponse = await fetch(url, {
         method: "DELETE",
-    })
-        .then((response) => response.json())
-        .then((data) => {
-            console.log(data);
-            let formattedData = JSON.stringify(data, null, 2);
-            response.innerHTML = `<pre>${formattedData}</pre>`;
-        })
-        .catch((error) => console.error(error));
+    });
+
+    const data = await fetchResponse.json();
+    if (!fetchResponse.ok) { throw new Error("Cannot get response"); }
+
+    let formattedData = JSON.stringify(data, null, 2);
+    response.innerHTML = `<pre>${formattedData}</pre>`;
+    
 }
