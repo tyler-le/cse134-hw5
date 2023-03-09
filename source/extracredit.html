@@ -5,15 +5,57 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <script src="ButtonCount.js"></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
 </head>
+
 <body>
 <div id="container"> </div>
+
+<div id="vue-btn">
+    <button @click="count += 1">(Vue) Times Clicked: {{count}}</button>
+</div>
+
+
 <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
 <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
 
 
-<script type='module' src="./ButtonCounterEC.js"></script>
+<script>
+    /*
+    * Source: https://reactjs.org/docs/add-react-to-a-website.html#add-react-in-one-minute
+    * */
+
+'use strict';
+
+const e = React.createElement;
+
+class ButtonCount extends React.Component {
+
+    constructor(props) {
+        super(props);
+        this.state = { count: 0 };
+    }
+
+    render() {
+        return e(
+            'button',
+            { onClick: () => this.setState({ count: this.state.count+1}) },
+            `(React) Times Clicked: ${this.state.count}`
+        );
+    }
+}
+
+const container = document.querySelector('#container');
+const root = ReactDOM.createRoot(container);
+root.render(e(ButtonCount));</script>
+
+<script>
+    new Vue({
+        el: "#vue-btn",
+        data: {
+            count: 0
+        }
+    });
+</script>
 </body>
 </html>
