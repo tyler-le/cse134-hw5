@@ -19,6 +19,16 @@
 
       <input type="hidden" id="date" name="date" />
       <br>
+
+      <label>Request Type:</label>
+      <br>
+      <input type="radio" name="request-type" id="fetch" value="fetch" checked>
+      <label for="fetch">Fetch</label>
+      <br>
+      <input type="radio" name="request-type" id="xhr" value="xhr">
+      <label for="xhr">XMLHttpRequest</label>
+      <br>
+
       <button type="button" id="postBtn">POST</button>
       <button type="button" id="getBtn">GET</button>
       <button type="button" id="putBtn">PUT</button>
