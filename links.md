@@ -1,9 +1,7 @@
-Part 1 https://effervescent-beijinho-5179d0.netlify.app/source/part1/nativedialogs.html
+Netlify Main Page: https://superb-arithmetic-fccd98.netlify.app/
 
-Part 2 https://effervescent-beijinho-5179d0.netlify.app/source/part2/customdialogs.html
+Part 1: https://superb-arithmetic-fccd98.netlify.app/source/methodtest.html
 
-Part 3 https://effervescent-beijinho-5179d0.netlify.app/source/part3/crud.html
+Part 2: https://superb-arithmetic-fccd98.netlify.app/source/webcomponent.html
 
-Part 4 https://effervescent-beijinho-5179d0.netlify.app/source/part4/styledcrud.html
-
-Portfolio Website https://effervescent-beijinho-5179d0.netlify.app/
+Part 3: https://superb-arithmetic-fccd98.netlify.app/source/extracredit.html
