@@ -155,6 +155,7 @@ export async function doDelete() {
             }
         };
         xhr.open('DELETE', 'https://httpbin.org/delete', true);
-        xhr.send();
+        xhr.send(`id=${id}`);
+
     }
 }
